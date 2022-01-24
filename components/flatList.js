@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import { Button, RefreshControl, ScrollView, FlatList } from "react-native-web";
+import { StyleSheet, Text, View, FlatList } from "react-native";
 
 export const Array = () => {
   const [list, setList] = useState([
@@ -31,29 +30,25 @@ export const Array = () => {
   //keyExtractor={(item,index)=>index.toString()}
 
   return (
-    <div>
-      <h2>Hello world</h2>
-      <FlatList
-        numColumns={2}
-        data={list}
-        renderItem={({ item }) => (
-          <View style={styles.container}>
-            <Text style={styles.container}>{item.name}</Text>
-          </View>
-        )}
-      />
-    </div>
+    <FlatList
+      numColumns={2}
+      data={list}
+      renderItem={({ item }) => (
+        <View style={styles.container}>
+          <Text style={styles.container}>{item.name}</Text>
+        </View>
+      )}
+    />
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#black",
-    alignnames: "center",
+    alignItems: "center",
     justifyContent: "center",
-    marginTop: "50px",
-    fontSize: "50px",
+    marginTop: 50,
+    fontSize: 50,
   },
 });
 

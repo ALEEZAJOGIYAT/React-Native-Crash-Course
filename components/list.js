@@ -68,10 +68,9 @@ export const List = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#black",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: "50px",
-    fontSize: "50px",
+    marginTop: 50,
+    fontSize: 50,
   },
 });
